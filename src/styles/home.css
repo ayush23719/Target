@@ -1,0 +1,7 @@
+.subtext {
+  color: white;
+  font-size: 1.5em;
+  word-wrap: break-word;
+  max-width: 700px; /* Adjust the maximum width as desired */
+  margin: 0 auto; /* Center the container */
+}
