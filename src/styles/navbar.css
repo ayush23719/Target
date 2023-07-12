@@ -1,0 +1,13 @@
+.navbar {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.navbar .item {
+  font-size: 1.5em !important;
+  color: white !important;
+}
+
+.navbar .right.menu .item:hover {
+  color: #808080 !important;
+}
