@@ -35,7 +35,16 @@ const Upload = () => {
               >
                 Title
               </label>
-              <input type="text" placeholder="Enter the title" />
+              <input
+                type="text"
+                placeholder="Enter the title"
+                style={{
+                  background: "transparent",
+                  border: "1px solid white",
+                  color: "white",
+                }}
+                className="upload-input"
+              />
             </Form.Field>
             <Form.Field>
               <label
@@ -43,7 +52,16 @@ const Upload = () => {
               >
                 Category
               </label>
-              <input type="text" placeholder="Enter the category" />
+              <input
+                type="text"
+                placeholder="Enter the category"
+                style={{
+                  background: "transparent",
+                  border: "1px solid white",
+                  color: "white",
+                }}
+                className="upload-input"
+              />
             </Form.Field>
             <div className="upload-link-container">
               <input
@@ -55,7 +73,7 @@ const Upload = () => {
                 Browse
               </Link>
             </div>
-            <Button primary fluid>
+            <Button style={{ fontSize: "1.5em" }} primary fluid>
               Submit
             </Button>
           </Form>
