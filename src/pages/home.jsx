@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Header, Button, Grid } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 import backgroundImage from "../assets/home.jpg";
 import "../styles/home.css";
 
@@ -31,9 +32,13 @@ const Home = () => {
           <Grid.Row verticalAlign="middle">
             <Grid.Column textAlign="center">
               <Button.Group size="huge">
-                <Button primary>Upload</Button>
+                <Button primary as={Link} to="/upload">
+                  Upload
+                </Button>
                 <Button.Or />
-                <Button secondary>Search</Button>
+                <Button secondary as={Link} to="/search">
+                  Search
+                </Button>
               </Button.Group>
             </Grid.Column>
           </Grid.Row>

@@ -5,7 +5,11 @@ import "../styles/navbar.css";
 
 const Navbar = () => {
   return (
-    <Menu fixed="top" className="navbar" style={{ marginTop: "1em" }}>
+    <Menu
+      fixed="top"
+      className="navbar borderless"
+      style={{ marginTop: "1em", borderBottom: "none" }}
+    >
       <Container>
         <Menu.Item as={Link} to="/" header>
           Target App
