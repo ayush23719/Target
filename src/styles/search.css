@@ -1,0 +1,16 @@
+.upload-container {
+  position: relative;
+  padding: 2em; /* Add padding for smaller screen sizes */
+}
+
+.heading {
+  color: white !important;
+  font-size: 3em !important;
+  font-weight: bold !important;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2em !important;
+  }
+}
