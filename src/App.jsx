@@ -6,6 +6,7 @@ import Home from "./pages/home";
 import Upload from "./pages/upload";
 import Search from "./pages/search";
 import Results from "./pages/results";
+import Notes from "./pages/notes";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/upload" element={<Upload />} />
           <Route exact path="/search" element={<Search />} />
           <Route exact path="/results/:category" element={<Results />} />
+          <Route exact path="/notes" element={<Notes />} />
         </Routes>
       </Router>
     </div>

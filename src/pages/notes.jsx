@@ -3,10 +3,8 @@ import { Container, Header, Card, Modal, Image } from "semantic-ui-react";
 import backgroundImage from "../assets/results.jpg";
 import notesImage from "../assets/notes.jpg";
 import "../styles/results.css";
-import { useParams } from "react-router-dom";
 
 const Results = () => {
-  const { category } = useParams();
   const [openModal, setOpenModal] = useState(false);
   const [imageToShow, setImageToShow] = useState("");
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -29,32 +27,47 @@ const Results = () => {
   };
   const notes = [
     {
-      title: category,
+      title: "DSA",
       image: notesImage,
       date: "Uploaded on Aug 2022",
     },
     {
-      title: category,
+      title: "Computer Networks",
       image: notesImage,
       date: "Uploaded on Sep 2022",
     },
     {
-      title: category,
+      title: "Operating Systems",
       image: notesImage,
       date: "Uploaded on Feb 2023",
     },
     {
-      title: category,
+      title: "DBMS",
       image: notesImage,
       date: "Uploaded on Feb 2023",
     },
     {
-      title: category,
+      title: "Computer Architecture",
       image: notesImage,
       date: "Uploaded on Feb 2023",
     },
     {
-      title: category,
+      title: "Discrete Mathematics",
+      image: notesImage,
+      date: "Uploaded on Feb 2023",
+    },
+    {
+      title: "Web Technologies",
+      image: notesImage,
+      date: "Uploaded on Feb 2023",
+    },
+    {
+      title: "Software Engineering",
+      image: notesImage,
+      date: "Uploaded on Feb 2023",
+    },
+    {
+      title: "Computer Graphics",
       image: notesImage,
       date: "Uploaded on Feb 2023",
     },
@@ -72,7 +85,7 @@ const Results = () => {
     >
       <Container textAlign="center">
         <Header as="h1" className="heading">
-          You Searched for: {category}
+          All Uploaded Notes
         </Header>
 
         <div className="card-grid">
