@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/home";
 import Upload from "./pages/upload";
 import Search from "./pages/search";
+import Results from "./pages/results";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/upload" element={<Upload />} />
           <Route exact path="/search" element={<Search />} />
+          <Route exact path="/results/:category" element={<Results />} />
         </Routes>
       </Router>
     </div>

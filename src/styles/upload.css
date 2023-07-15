@@ -16,7 +16,6 @@
   margin: 0 auto;
 }
 
-/* change border color of upload-input when focused */
 .upload-input:focus {
   border: 1px solid #00b5ad !important;
 }

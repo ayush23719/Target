@@ -1,6 +1,5 @@
 .upload-container {
   position: relative;
-  padding: 2em; /* Add padding for smaller screen sizes */
 }
 
 .heading {
@@ -13,4 +12,16 @@
   .heading {
     font-size: 2em !important;
   }
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+
+.bottom-text p {
+  font-size: 1.2em;
 }

@@ -1,26 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container, Header } from "semantic-ui-react";
 import backgroundImage from "../assets/search.jpg";
-import "../styles/upload.css";
+import "../styles/search.css";
+import { useNavigate } from "react-router-dom";
 
 const Search = () => {
   const [searchBarClass, setSearchBarClass] = useState("massive");
+  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) {
-        setSearchBarClass("big");
-      } else {
-        setSearchBarClass("massive");
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const handleSearch = () => {
+    const category = searchTerm.trim();
+    if (category) {
+      navigate(`/results/${category}`);
+    }
+  };
 
   return (
     <div
@@ -31,6 +25,7 @@ const Search = () => {
         backgroundPosition: "center",
         height: "100vh",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
       }}
@@ -41,8 +36,15 @@ const Search = () => {
         </Header>
 
         <div className={`ui action input ${searchBarClass} focus`}>
-          <input type="text" placeholder="Search..." />
-          <button className="ui button">Search</button>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <button className="ui button" onClick={handleSearch}>
+            Search
+          </button>
         </div>
       </Container>
     </div>
